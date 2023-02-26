@@ -1,8 +1,4 @@
-
-
-public class week04 {
-}
-class Solution130 {
+public class Solution130 {
     int row,col;
     public void solve(char[][] board) {
         if(board == null || board.length==0){
@@ -37,31 +33,3 @@ class Solution130 {
         dfs(board,i,j+1);
     }
 }
-class Solution538 {
-    int num = 0;
-    public TreeNode convertBST(TreeNode root) {
-        if(root != null){
-            convertBST(root.right);
-
-            root.val =root.val + num;
-            num = root.val;
-
-            convertBST(root.left);
-            return root;
-        }
-        return null;
-
-    }
-}
- class TreeNode {
-     int val;
-     TreeNode left;
-     TreeNode right;
-     TreeNode() {}
-     TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-         this.left = left;
-          this.right = right;
-      }
-  }
